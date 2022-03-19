@@ -29,7 +29,7 @@ npm start
 ## Dependencies
 
 - Node.js
-- Next
+- Next.Js
 - Axios
 
 ## Features
