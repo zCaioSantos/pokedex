@@ -32,6 +32,7 @@ npm start
 - Node.js
 - Next.Js
 - Axios
+- React Icons
 
 ## Features
 
