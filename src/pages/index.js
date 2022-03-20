@@ -10,7 +10,7 @@ export default function Home({ pokemon }) {
                 <img src="./img/logoPokedex.png" width={150} alt="Logo Pokedex" />
                 <h1>Welcome to <span>Pokedex</span></h1>
                 <form>
-                    <input type="text" placeholder="Informe o nome do pokemon" />
+                    <input type="text" placeholder="What is this pokémon?" />
                     <button type="submit"><HiSearch size="1.5em" color="757575" /></button>
                 </form>
             </section>
