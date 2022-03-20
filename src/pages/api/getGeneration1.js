@@ -9,7 +9,7 @@ export default async function handler(req, res) {
             const pokemon = {
                 id: result.id,
                 nome: result.name,
-                tipos: result.types,
+                tipos: result.types.map(typeInfo => typeInfo.type.name),
                 fotos: result.sprites.other.dream_world,
             };
             listPokemons.push(pokemon);

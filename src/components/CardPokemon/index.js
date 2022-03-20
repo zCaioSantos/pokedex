@@ -1,13 +1,16 @@
 import { React } from "react";
-import styles from "./cardPokemon.module.css"
+import styles from "./cardPokemon.module.css";
 
 export default function CardPokemon(props) {
     return (
-        <div className={styles.card__pokemon}>
+        <div className={`${styles.card__pokemon} ${styles[props.tipos[0]]}`}>
             <figcaption>
                 <img src={props.foto} alt={`Imagem do pokemon ${props.nome}`} />
             </figcaption>
-            <h1>{props.nome}</h1>
+            <section>
+                <h1>{props.nome}</h1>
+                <p>{props.tipos.join(" | ")}</p>
+            </section>
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function Home({ pokemon }) {
                 {pokemon.map((pokemon) => (
                     <li key={pokemon.id}>
                         <a href="#">
-                            <CardPokemon nome={pokemon.nome} foto={pokemon.fotos.front_default} />
+                            <CardPokemon nome={pokemon.nome} foto={pokemon.fotos.front_default} tipos={pokemon.tipos} />
                         </a>
                     </li>
                 ))}
