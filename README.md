@@ -9,7 +9,7 @@
 
 <div align="center">
    <p>Preview Build</p>
-   <img src="https://user-images.githubusercontent.com/81544166/159146549-2ad3fbea-6537-4b4b-97c9-862bce983a37.png" alt="Preview Build">
+   <img src="https://user-images.githubusercontent.com/81544166/159189786-4dfcb7f5-6f24-4dc3-ac69-f532a8e46971.png" alt="Preview Build">
    <p>Preview at Vercel is still under construction</p>
 </div>
 
