@@ -33,7 +33,7 @@
 .card__pokemon > figcaption > img {
     width: 100px;
     height: auto;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
 }
 
 .card__pokemon > section {
@@ -67,63 +67,72 @@
 /* Types bg colors */
 
 .grass {
-    background-color: rgb(54, 216, 103);
+    background-color: #95CEA5;
 }
 
 .fire {
-    background-color: rgb(216, 113, 54);
+    background-color: #FFA6A6;
 }
 
 .water {
-    background-color: rgb(54, 165, 216);
+    background-color: #A6D4FF;
 }
 
 .normal {
-    background-color: rgb(165, 165, 165);
+    background-color: #A1AEBB;
 }
 
 .bug {
-    background-color: rgb(38, 167, 76);
+    background-color: #C8FFA6;
 }
 
 .poison {
-    background-color: rgb(216, 54, 208);
+    background-color: #C2A6FF;
 }
 
 .electric {
-    background-color: rgb(192, 216, 54);
+    background-color: #FDFFA6;
 }
 
 .ground {
-    background-color: rgb(189, 181, 79);
+    background-color: #CEC595;
 }
 
 .fairy {
-    background-color: rgb(189, 79, 147);
+    background-color: #FFA6F1;
 }
 
 .fighting {
-    background-color: rgb(189, 79, 79);
+    background-color: #FF8C8C;
 }
 
 .psychic {
-    background-color: rgb(206, 40, 117);
+    background-color: #E2A6FF;
 }
 
 .rock {
-    background-color: rgb(105, 89, 54);
+    background-color: #CEAA95;
 }
 
 .ghost {
-    background-color: rgb(123, 98, 163);
+    background-color: #B18CFF;
 }
 
 .ice {
-    background-color: #51c4e7;
+    background-color: #A6EFFF;
 }
 
 .dragon {
-    background: linear-gradient(0deg, rgba(83,164,207,1) 0%, rgba(241,110,87,1) 100%);
+    background: linear-gradient(180deg, #A6D4FF 0%, #FF8C8C 100%);
+}
+
+/* Font Colors */
+
+.electric > section > h1,
+.bug > section > h1,
+.electric > section > h1,
+.electric > section > h1 {
+    color: #212121 !important;
 }
 
 

@@ -1,17 +1,12 @@
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 2em;
-
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1023%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(45%2c 45%2c 45%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c126 C 96%2c149.6 288%2c258 480%2c244 C 672%2c230 768%2c68.4 960%2c56 C 1152%2c43.6 1344%2c156.8 1440%2c182L1440 560L0 560z' fill='rgba(255%2c 150%2c 150%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c532 C 96%2c505 288%2c407.8 480%2c397 C 672%2c386.2 768%2c499.8 960%2c478 C 1152%2c456.2 1344%2c326 1440%2c288L1440 560L0 560z' fill='rgba(109%2c 209%2c 233%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1023'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .container > ul {
@@ -26,7 +21,7 @@
     flex-wrap: wrap;
     gap: 1em;
 
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .container > ul::-webkit-scrollbar {
@@ -66,5 +61,5 @@
 }
 
 .container > .header > form > input:focus {
-    outline: 2px solid #2D2D2D;
+    outline: 2px solid #4a828b;
 }
