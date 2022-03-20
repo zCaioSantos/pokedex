@@ -1,15 +1,16 @@
 <div align="center">
    <img height="200" src="https://user-images.githubusercontent.com/81544166/159062575-670cf969-667c-43b6-9b17-929debef54f4.png" alt="Logo QrCode" />
    <h1>Pokedex</h1>
-   <p>Uma pokedex feita consumindo a <a href="https://pokeapi.co">Pokeapi</a>.</p>
+   <p>Uma Pokedex feita consumindo a <a href="https://pokeapi.co">Pokeapi</a>.</p>
    <br>
 </div>
 
 # Sample preview running the app:
 
 <div align="center">
-   <img height="50" src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="Netlify" />
-   <p>Under construction!</p>
+   <p>Preview Build</p>
+   <img src="https://user-images.githubusercontent.com/81544166/159146549-2ad3fbea-6537-4b4b-97c9-862bce983a37.png" alt="Preview Build">
+   <p>Preview at Vercel is still under construction</p>
 </div>
 
 # Contributing
@@ -34,7 +35,7 @@ npm start
 
 ## Features
 
-- [ ] Listar todos os Pokemons da 1ªGeração
+- [x] Listar todos os Pokemons da 1ªGeração
 - [ ] Detalhes dos Pokemons
 - [ ] Lista de Pokemon capturados
 
