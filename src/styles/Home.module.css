@@ -48,16 +48,35 @@
 
 .container > .header > form {
     width: 100%;
+
+    position: relative;
 }
 
 .container > .header > form > input {
     width: 100%;
-    padding: 10px 25px;
+    padding: 10px 25px 10px 50px;
     border-radius: 50px;
     border: none;
     outline: none;
 
     transition: border .3s ease;
+}
+
+.container > .header > form > button {
+    position: absolute;
+    top: 26%;
+    left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    cursor: pointer;
 }
 
 .container > .header > form > input:focus {

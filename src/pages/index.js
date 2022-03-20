@@ -1,6 +1,7 @@
 import { React } from "react";
 import CardPokemon from "../components/CardPokemon";
 import styles from "../styles/Home.module.css";
+import { HiSearch } from "react-icons/hi";
 
 export default function Home({ pokemon }) {
     return (
@@ -10,6 +11,7 @@ export default function Home({ pokemon }) {
                 <h1>Welcome to <span>Pokedex</span></h1>
                 <form>
                     <input type="text" placeholder="Informe o nome do pokemon" />
+                    <button type="submit"><HiSearch size="1.5em" color="757575" /></button>
                 </form>
             </section>
             <ul>
