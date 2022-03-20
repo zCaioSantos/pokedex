@@ -1,4 +1,4 @@
 {
     "extends": "next/core-web-vitals",
-    "indent": ["error", 2]
+    "indent": ["error", 4]
 }
