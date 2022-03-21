@@ -1,10 +1,16 @@
 import { React } from "react";
 import axios from "axios";
 import styles from "../../styles/pokemon.module.css";
+import Head from 'next/head'
 
 export default function pokemon({ pokemon }) {
     return (
         <section className={styles.container}>
+            <Head>
+                <title>Pokedex</title>
+                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <article className={styles.pokemon}>
                 <h3>ID: {pokemon.id < 10 ? `0${pokemon.id}` : pokemon.id}</h3>
                 <figure>

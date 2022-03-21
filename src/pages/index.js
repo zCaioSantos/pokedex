@@ -3,6 +3,7 @@ import CardPokemon from "../components/CardPokemon";
 import styles from "../styles/Home.module.css";
 import { HiSearch } from "react-icons/hi";
 import axios from "axios";
+import Head from 'next/head'
 
 export default function Home({ pokemon }) {
 
@@ -10,6 +11,11 @@ export default function Home({ pokemon }) {
 
     return (
         <div className={styles.container}>
+            <Head>
+                <title>Pokedex</title>
+                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <section className={styles.header}>
                 <img src="./img/logoPokedex.png" width={150} alt="Logo Pokedex" />
                 <h1>Welcome to <span>Pokedex</span></h1>
