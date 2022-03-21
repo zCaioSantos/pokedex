@@ -37,6 +37,7 @@ npm start
 ## Features
 
 - [x] Listar todos os Pokemons da 1ªGeração
+- [x] Buscar Pokemon
 - [x] Detalhes dos Pokemons
 
 # Author
