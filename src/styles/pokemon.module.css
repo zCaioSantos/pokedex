@@ -37,7 +37,7 @@
 }
 
 .container > .pokemon > figure > img {
-    width: 300px;
+    width: 200px;
     height: auto;
     filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
 }
@@ -88,7 +88,7 @@
 
 .container > article > .info__pokemon > .len {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     letter-spacing: 0.065em;
 }
 

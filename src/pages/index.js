@@ -21,7 +21,7 @@ export default function Home({ pokemon }) {
                 {pokemon.filter((value) => {
                     if (busca === "") {
                         return value
-                    } else if (value.nome === busca) {
+                    } else if (value.nome === busca.toLocaleLowerCase()) {
                         return value
                     }
                 }).map((pokemon) => (
