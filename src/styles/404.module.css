@@ -1,0 +1,38 @@
+.container {
+    height: 93vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.container > img {
+    width: 200px;
+    height: auto;
+}
+
+.container > hr {
+    height: 125px;
+    width: 1px;
+    background-color: black;
+    border: none;
+}
+
+.container > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > article > h1 {
+    font-weight: 300;
+    font-size: 3em;
+}
+
+.container > article > p {
+    margin-top: -0.8em;
+    font-size: 1.1em;
+    font-weight: 300;
+}

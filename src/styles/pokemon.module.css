@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+
+    color: white;
+}
+
+.container > .pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8em;
+}
+
+.container > .pokemon >  h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.container > .pokemon > figure {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > .pokemon > figure > img {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
+}
+
+.container > .pokemon > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.container > .pokemon > section >  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.065em;
+}
+
+.container > .pokemon > section >  h1::first-letter {
+    text-transform: uppercase;
+}
+
+.container > .pokemon > section >  p {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.container > article > .info__pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.container > article > .info__pokemon > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.container > article > .info__pokemon > .article > p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.container > article > .info__pokemon > .len {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.065em;
+}
+
