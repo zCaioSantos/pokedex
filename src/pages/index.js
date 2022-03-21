@@ -13,7 +13,7 @@ export default function Home({ pokemon }) {
                 <img src="./img/logoPokedex.png" width={150} alt="Logo Pokedex" />
                 <h1>Welcome to <span>Pokedex</span></h1>
                 <div className={styles.input__busca}>
-                    <input type="text" placeholder="What is this pokémon?" onChange={(evt) => {setBusca(evt.target.value)}} />
+                    <input type="text" placeholder="What is this pokémon?" value={busca} onChange={(evt) => {setBusca(evt.target.value)}} />
                     <i><HiSearch size="1.5em" color="757575" /></i>
                 </div>
             </section>
