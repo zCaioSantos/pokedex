@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function handler(req, res) {
+export default async function getGeneration(req, res) {
     if (req.method === "GET") {
         let listPokemons = [];
 
