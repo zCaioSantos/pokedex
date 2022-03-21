@@ -8,8 +8,8 @@
 # Sample preview running the app:
 
 <div align="center">
-   <a href="https://zpokedex.vercel.app"><h2>Preview Vercel</h2></a>
-   <img src="https://user-images.githubusercontent.com/81544166/159189786-4dfcb7f5-6f24-4dc3-ac69-f532a8e46971.png" alt="Preview Build">
+   <a href="https://zpokedex.vercel.app">Preview Vercel</a>
+   <a href="https://zpokedex.vercel.app"><img src="https://user-images.githubusercontent.com/81544166/159189786-4dfcb7f5-6f24-4dc3-ac69-f532a8e46971.png" alt="Preview Build"></a>
 </div>
 
 # Contributing
