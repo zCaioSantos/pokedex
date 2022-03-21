@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import CardPokemon from "../components/CardPokemon";
 import styles from "../styles/Home.module.css";
 import { HiSearch } from "react-icons/hi";
+import axios from "axios";
 
 export default function Home({ pokemon }) {
 
@@ -37,12 +38,22 @@ export default function Home({ pokemon }) {
 }
 
 export async function getServerSideProps(context) {
-    const result = await fetch("http://localhost:3000/api/getGeneration1");
-    const pokemon = await result.json();
+    let listPokemons = [];
+
+    for (let i = 1; i <= 151; i++) {
+        const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}/`).then((res) => res.data);
+        const pokemon = {
+            id: result.id,
+            nome: result.name,
+            tipos: result.types.map(typeInfo => typeInfo.type.name),
+            fotos: result.sprites.other.dream_world,
+        };
+        listPokemons.push(pokemon);
+    }
 
     return {
         props: {
-            pokemon: pokemon,
+            pokemon: listPokemons,
         },
     };
 }
