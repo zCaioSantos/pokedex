@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "../../styles/pokemon.module.css";
 import Head from "next/head";
 import { AiFillStar } from "react-icons/ai";
+import Loading from "../../components/Loading";
 
 export default function pokemon({ pokemon }) {
     return (
