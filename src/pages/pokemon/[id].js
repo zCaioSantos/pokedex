@@ -53,6 +53,7 @@ export default function pokemon({ pokemon }) {
     );
 }
 
+
 export async function getServerSideProps(context) {
     const id = context.params.id;
     const result = await axios

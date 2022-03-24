@@ -4,18 +4,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 2.5em;
+
+    color: #3d3d3d;
 }
 
-.container > img {
-    width: 200px;
+.container > a > img {
+    width: 100%;
     height: auto;
 }
 
 .container > hr {
     height: 125px;
     width: 1px;
-    background-color: black;
+    background-color: #3d3d3d77;
     border: none;
 }
 
@@ -35,4 +37,19 @@
     margin-top: -0.8em;
     font-size: 1.1em;
     font-weight: 300;
+}
+
+@media (max-width: 600px) {
+    
+    .container > hr {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;
+
+    }
 }

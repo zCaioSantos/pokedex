@@ -127,15 +127,15 @@
 }
 
 .flying  {
-    background: linear-gradient(180deg, #A1AEBB 0%, #95CEA5 100%);
+    background: #CCB4FF;
 }
 
 .steel {
-    background: radial-gradient(50% 50% at 50% 50%, #C1C1C1 31.25%, #989898 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #E3D7FF 0%, #C4A9FF 100%);
 }
 
 .dark {
-    background-color: #B79563;
+    background: #B79563;
 }
 
 
@@ -160,6 +160,7 @@
 
 .status__bar {
     width: 100%;
+    max-width: 900px;
     background-color: rgb(231, 233, 232);
     border-radius: 5px;
 
@@ -168,6 +169,7 @@
 
 .status__bar > .status__bar__fill {
     color: #3d3d3d79;
+    height: 100%;
 
     display: flex;
     justify-content: flex-start;
@@ -176,6 +178,7 @@
 
     padding: 0.2em 0.5em;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .hp {
