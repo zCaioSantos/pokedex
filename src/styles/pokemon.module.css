@@ -125,6 +125,18 @@
     background: linear-gradient(180deg, #A6D4FF 0%, #FF8C8C 100%);
 }
 
+.flying  {
+    background: linear-gradient(180deg, #A1AEBB 0%, #95CEA5 100%);
+}
+
+.steel {
+    background: radial-gradient(50% 50% at 50% 50%, #C1C1C1 31.25%, #989898 100%);
+}
+
+.dark {
+    background-color: #B79563;
+}
+
 
 /* STATUS  */
 
