@@ -43,7 +43,7 @@ export default function Home({ pokemon }) {
     );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     let listPokemons = [];
 
     for (let i = 1; i <= 151; i++) {
