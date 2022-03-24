@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
 
     color: #3D3D3D;
 
@@ -24,6 +24,7 @@
 .pokemon__info > h1 {
     text-transform: capitalize;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .pokemon__info > figure {
@@ -40,7 +41,7 @@
 }
 
 .pokemon__info > figure > img {
-    width: 90%;
+    width: 65%;
     height: auto;
 }
 
@@ -54,13 +55,13 @@
 }
 
 .pokemon__info > .pokemon__info__tipos > li {
-    padding: 5px 15px;
+    padding: 10px 30px;
     border-radius: 50px;
 }
 
 .pokemon__info > .pokemon__info__tipos > li > p{
     text-transform: capitalize;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 /* Types bg colors */
@@ -161,6 +162,8 @@
     width: 100%;
     background-color: rgb(231, 233, 232);
     border-radius: 5px;
+
+    overflow: hidden;
 }
 
 .status__bar > .status__bar__fill {
