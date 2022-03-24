@@ -2,93 +2,187 @@
     width: 100%;
     height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2em;
-
-    color: white;
+    padding: 2em;
 }
 
-.container > .pokemon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.8em;
-}
-
-.container > .pokemon >  h3 {
-    font-weight: 400;
-    font-size: 26px;
-}
-
-.container > .pokemon > figure {
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    border-radius: 50%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container > .pokemon > figure > img {
-    width: 200px;
-    height: auto;
-    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
-}
-
-.container > .pokemon > section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.1em;
-}
-
-.container > .pokemon > section >  h1 {
-    font-weight: 700;
-    font-size: 48px;
-    letter-spacing: 0.065em;
-}
-
-.container > .pokemon > section >  h1::first-letter {
-    text-transform: uppercase;
-}
-
-.container > .pokemon > section >  p {
-    font-weight: 400;
-    font-size: 26px;
-}
-
-.container > article > .info__pokemon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.container > article > .info__pokemon > article {
+.pokemon__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5em;
+
+    color: #3D3D3D;
+
+    margin-bottom: 1em;
 }
 
-.container > article > .info__pokemon > .article > p {
+.pokemon__info > p:first-child {
+    color: #3d3d3d7c;
+}
+
+.pokemon__info > h1 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.pokemon__info > figure {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon__info > figure > img {
+    width: 90%;
+    height: auto;
+}
+
+/* TIPOS */
+
+.pokemon__info > .pokemon__info__tipos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.pokemon__info > .pokemon__info__tipos > li {
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+.pokemon__info > .pokemon__info__tipos > li > p{
+    text-transform: capitalize;
+    font-size: 0.7em;
+}
+
+/* Types bg colors */
+
+.grass {
+    background-color: #95CEA5;
+}
+
+.fire {
+    background-color: #FFA6A6;
+}
+
+.water {
+    background-color: #A6D4FF;
+}
+
+.normal {
+    background-color: #A1AEBB;
+}
+
+.bug {
+    background-color: #C8FFA6;
+}
+
+.poison {
+    background-color: #C2A6FF;
+}
+
+.electric {
+    background-color: #FDFFA6;
+}
+
+.ground {
+    background-color: #CEC595;
+}
+
+.fairy {
+    background-color: #FFA6F1;
+}
+
+.fighting {
+    background-color: #FF8C8C;
+}
+
+.psychic {
+    background-color: #E2A6FF;
+}
+
+.rock {
+    background-color: #CEAA95;
+}
+
+.ghost {
+    background-color: #B18CFF;
+}
+
+.ice {
+    background-color: #A6EFFF;
+}
+
+.dragon {
+    background: linear-gradient(180deg, #A6D4FF 0%, #FF8C8C 100%);
+}
+
+
+/* STATUS  */
+
+.pokemon__status {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.pokemon__status > h1 {
     font-weight: 300;
-    font-size: 18px;
+    color: #3d3d3d80;
+    margin-bottom: 0.5em;
 }
 
-.container > article > .info__pokemon > .len {
-    font-weight: 700;
-    font-size: 36px;
-    letter-spacing: 0.065em;
+.status__bar {
+    width: 100%;
+    background-color: rgb(231, 233, 232);
+    border-radius: 5px;
 }
 
+.status__bar > .status__bar__fill {
+    color: #3d3d3d79;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+
+    padding: 0.2em 0.5em;
+    text-transform: capitalize;
+}
+
+.hp {
+    background-color: #C8FFA6;
+}
+
+.attack {
+    background-color: #FF8C8C;
+}
+
+.defense {
+    background-color: #A1AEBB;
+}
+
+.special-attack {
+    background-color: #A6D4FF;
+}
+
+.special-defense {
+    background-color: #B18CFF;
+}
+
+.speed {
+    background-color: #FDFFA6;
+}

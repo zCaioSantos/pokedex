@@ -1,52 +1,53 @@
 import { React } from "react";
 import axios from "axios";
 import styles from "../../styles/pokemon.module.css";
-import Head from 'next/head'
+import Head from "next/head";
+import { AiFillStar } from "react-icons/ai";
 
 export default function pokemon({ pokemon }) {
     return (
         <section className={styles.container}>
             <Head>
                 <title>Pokedex</title>
-                <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link
+                    rel="shortcut icon"
+                    href="/favicon.ico"
+                    type="image/x-icon"
+                />
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
             </Head>
-            <article className={styles.pokemon}>
-                <h3>ID: {pokemon.id < 10 ? `0${pokemon.id}` : pokemon.id}</h3>
+
+            <article className={styles.pokemon__info}>
+                <p>ID: {pokemon.id < 10 ? `0${pokemon.id}` : pokemon.id}</p>
                 <figure>
-                    <img src={pokemon.fotos.front_default} alt={`Foto do pokemon: ${pokemon.nome}`} />
+                    <img src={pokemon.fotos.front_default} alt={`Imagem do ${pokemon.nome}`} />
                 </figure>
-                <section>
-                    <h1>{pokemon.nome}</h1>
-                    <p>{pokemon.tipos.join(" | ")}</p>
-                </section>
+                <h1>{pokemon.nome}</h1>
+                <ul className={styles.pokemon__info__tipos}>
+                    {pokemon.tipos.map((item) => (
+                        <li key={item} className={`${styles[item]}`}>
+                            <p>{item}</p>
+                        </li>
+                    ))}
+                </ul>
+                {pokemon.mitico && (
+                    <AiFillStar color="#e2a6ff" size={30}/>
+                )}
+                {pokemon.lendario && (
+                    <AiFillStar color="#FDFFA6" size={30}/>
+                )}
             </article>
-            <article>
-                <section className={styles.info__pokemon}>
-                    <h2>Detalhes</h2>
-                    <article className={styles.len}>
-                        {pokemon.lendario && <p style={{color: "#FFE600"}}>Lendário</p>}
-                        {pokemon.mitico && <p style={{color: "#B18CFF"}}>Mítico</p>}
-                    </article>
-                    <article className={styles.habiidades}>
-                        <h3>Habilidades</h3>
-                        <p>
-                            <p>{pokemon.habilidades.join(" | ")}</p>
-                        </p>
-                    </article>
-                    <article className={styles.status}>
-                        <h3>Status</h3>
-                        <p>
-                            <p>{pokemon.baseStatus.join(" | ")}</p>
-                        </p>
-                    </article>        
-                        {pokemon.eggsGroups && (
-                            <article className={styles.egggroup}>
-                                <h3>Eggs-Groups</h3>
-                                <p>{pokemon.eggsGroups.join(" | ")}</p>
-                            </article>
-                        )}
-                </section>
+
+            <article className={styles.pokemon__status}>
+                <h1>Status Base</h1>
+                {pokemon.baseStatus.map((item) => (
+                    <div className={styles.status__bar}>
+                        <div className={`${styles.status__bar__fill} ${styles[item.stat.name]}`} style={{width: `${item.base_stat}%`}}>{`${item.stat.name}: ${item.base_stat}`}</div>
+                    </div>
+                ))}
             </article>
         </section>
     );
@@ -54,7 +55,9 @@ export default function pokemon({ pokemon }) {
 
 export async function getServerSideProps(context) {
     const id = context.params.id;
-    const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((res) => res.data);
+    const result = await axios
+        .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+        .then((res) => res.data);
     const result2 = await axios
         .get(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
         .then((res) => res.data);
@@ -67,8 +70,10 @@ export async function getServerSideProps(context) {
         lendario: result2.is_legendary,
         mitico: result2.is_mythical,
         eggsGroups: result2.egg_groups.map((eggsInfo) => eggsInfo.name),
-        baseStatus: result.stats.map((baseStatus) => baseStatus.base_stat),
-        habilidades: result.abilities.map((abilitiesInfo) => abilitiesInfo.ability.name),
+        baseStatus: result.stats,
+        habilidades: result.abilities.map(
+            (abilitiesInfo) => abilitiesInfo.ability.name
+        ),
     };
 
     return {
