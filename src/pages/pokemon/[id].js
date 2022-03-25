@@ -5,6 +5,7 @@ import Head from "next/head";
 import { AiFillStar } from "react-icons/ai";
 import { useRouter } from "next/router";
 import Loading from "../../components/Loading";
+import BtnVoltar from "../../components/BtnVoltar";
 
 export default function pokemon({ pokemon }) { 
     
