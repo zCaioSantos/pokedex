@@ -69,11 +69,11 @@ export async function getStaticPaths() {
 
     const paths = listPokes.map((pokemon, index) => {
         return { params: { id: (index + 1).toString() } }
-    })
+    });
 
     return {
       paths,
-      fallback: false
+      fallback: true
     };
 
 }
@@ -82,9 +82,20 @@ export async function getStaticProps (context) {
 
     const id = context.params.id;
 
-    const result = await axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-        .then((res) => res.data);
+    let result = null
+    
+    try {
+        result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((res) => res.data);
+    } catch (error) {
+        return {
+            redirect: {
+              destination: "/",
+            },
+        }
+    }
+
+
+
     const result2 = await axios
         .get(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
         .then((res) => res.data);
@@ -93,7 +104,7 @@ export async function getStaticProps (context) {
         id: result.id,
         nome: result.name,
         tipos: result.types.map((typeInfo) => typeInfo.type.name),
-        fotos: result.sprites.other.dream_world,
+        fotos: result.sprites.other.dream_world.front_default ? result.sprites.other.dream_world : result.sprites.other.home,
         lendario: result2.is_legendary,
         mitico: result2.is_mythical,
         eggsGroups: result2.egg_groups.map((eggsInfo) => eggsInfo.name),
