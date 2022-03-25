@@ -48,13 +48,17 @@
     color: #FFD400;
 }
 
-.container > .header > .input__busca {
+.container > .header > form {
+    width: 100%;
+}
+
+.container > .header > form > .input__busca {
     width: 100%;
 
     position: relative;
 }
 
-.container > .header > .input__busca > input {
+.container > .header > form > .input__busca > input {
     width: 100%;
     padding: 10px 25px 10px 50px;
     border-radius: 50px;
@@ -64,7 +68,7 @@
     transition: border .3s ease;
 }
 
-.container > .header > .input__busca > i {
+.container > .header > form >  .input__busca > i {
     position: absolute;
     top: 26%;
     left: 5%;
@@ -81,6 +85,6 @@
     cursor: pointer;
 }
 
-.container > .header > .input__busca > input:focus {
+.container > .header > form > .input__busca > input:focus {
     outline: 2px solid #4a828b;
 }

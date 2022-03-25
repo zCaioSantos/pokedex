@@ -67,8 +67,10 @@ export async function getStaticPaths() {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151");
     const listPokes =  await res.data.results;
 
-    const paths = listPokes.map((pokemon, index) => {
-        return { params: { id: (index + 1).toString() } }
+    const paths = listPokes.map((pokemon) => {
+        return { 
+            params: { id: pokemon.name.toString() },
+        }
     });
 
     return {

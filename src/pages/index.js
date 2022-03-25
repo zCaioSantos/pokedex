@@ -19,10 +19,12 @@ export default function Home({ pokemon }) {
             <section className={styles.header}>
                 <img src="./img/logoPokedex.png" width={150} alt="Logo Pokedex" />
                 <h1>Welcome to <span>Pokedex</span></h1>
-                <div className={styles.input__busca}>
-                    <input type="text" placeholder="What is this pokémon?" value={busca} onChange={(evt) => {setBusca(evt.target.value)}} />
-                    <i><HiSearch size="1.5em" color="757575" /></i>
-                </div>
+                <form action={`/pokemon/${busca.toLowerCase()}`}>
+                    <div className={styles.input__busca}>
+                        <input type="text" placeholder="What is this pokémon?" value={busca} onChange={(evt) => {setBusca(evt.target.value)}} />
+                        <i><HiSearch size="1.5em" color="757575" /></i>
+                    </div>
+                </form>
             </section>
             <ul>
                 {pokemon.filter((value) => {
@@ -33,7 +35,7 @@ export default function Home({ pokemon }) {
                     }
                 }).map((pokemon) => (
                     <li key={pokemon.id}>
-                        <a href={`/pokemon/${pokemon.id}`}>
+                        <a href={`/pokemon/${pokemon.nome}`}>
                             <CardPokemon nome={pokemon.nome} foto={pokemon.fotos.front_default} tipos={pokemon.tipos} />
                         </a>
                     </li>
@@ -46,7 +48,7 @@ export default function Home({ pokemon }) {
 export async function getStaticProps(context) {
     let listPokemons = [];
 
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= 386; i++) {
         const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}/`).then((res) => res.data);
         const pokemon = {
             id: result.id,
