@@ -11,7 +11,7 @@ export default function notFound() {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <a href="/">
-                <img src="./img/psyduck.svg" alt="Imagem do pokemon: Psyduck" />
+                <img src="/img/psyduck.svg" alt="Imagem do pokemon: Psyduck" />
             </a>
             <hr />
             <article>

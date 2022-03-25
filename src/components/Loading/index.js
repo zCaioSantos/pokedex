@@ -5,7 +5,7 @@ import { MdCatchingPokemon } from "react-icons/md";
 function Loading(props) {
     return (
         <div className={styles.loading__carregando}>
-            <p><MdCatchingPokemon /></p>
+            <p><MdCatchingPokemon size={100} /></p>
         </div>
     );
 }

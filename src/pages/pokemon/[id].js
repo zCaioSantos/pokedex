@@ -3,9 +3,17 @@ import axios from "axios";
 import styles from "../../styles/pokemon.module.css";
 import Head from "next/head";
 import { AiFillStar } from "react-icons/ai";
+import { useRouter } from "next/router";
 import Loading from "../../components/Loading";
 
-export default function pokemon({ pokemon }) {
+export default function pokemon({ pokemon }) { 
+    
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <Loading/>
+    }
+    
     return (
         <section className={styles.container}>
             <Head>
@@ -54,9 +62,26 @@ export default function pokemon({ pokemon }) {
     );
 }
 
+export async function getStaticPaths() {
 
-export async function getServerSideProps(context) {
+    const res = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=151");
+    const listPokes =  await res.data.results;
+
+    const paths = listPokes.map((pokemon, index) => {
+        return { params: { id: (index + 1).toString() } }
+    })
+
+    return {
+      paths,
+      fallback: false
+    };
+
+}
+
+export async function getStaticProps (context) {
+
     const id = context.params.id;
+
     const result = await axios
         .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then((res) => res.data);
