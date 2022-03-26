@@ -48,7 +48,7 @@ export default function Home({ pokemon }) {
 export async function getStaticProps(context) {
     let listPokemons = [];
 
-    for (let i = 1; i <= 386; i++) {
+    for (let i = 1; i <= 385; i++) {
         const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}/`).then((res) => res.data);
         const pokemon = {
             id: result.id,
