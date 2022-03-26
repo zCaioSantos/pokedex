@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
 
-    background-color: rgba(0, 0, 0, 0.192);
+    background: linear-gradient(90deg, #BD83BD 0%, #97D9E1 101.02%);
     backdrop-filter: blur(5px);
 }
 
