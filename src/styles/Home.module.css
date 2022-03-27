@@ -81,8 +81,6 @@
     border: none;
     outline: none;
     background-color: transparent;
-
-    cursor: pointer;
 }
 
 .container > .header > form > .input__busca > input:focus {

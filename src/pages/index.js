@@ -21,8 +21,8 @@ export default function Home({ pokemon }) {
                 <h1>Welcome to <span>Pokedex</span></h1>
                 <form action={`/pokemon/${busca.toLowerCase()}`}>
                     <div className={styles.input__busca}>
-                        <input type="text" placeholder="What is this pokémon?" value={busca} onChange={(evt) => {setBusca(evt.target.value)}} />
-                        <i><HiSearch size="1.5em" color="757575" /></i>
+                        <input title="Digite o nome do pokemon para buscar" type="text" placeholder="What is this pokémon?" value={busca} onChange={(evt) => {setBusca(evt.target.value)}} />
+                        <i><HiSearch size="1.3em" color="757575" /></i>
                     </div>
                 </form>
             </section>

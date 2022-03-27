@@ -3,7 +3,7 @@ import styles from "./cardPokemon.module.css";
 
 export default function CardPokemon(props) {
     return (
-        <div className={`${styles.card__pokemon} ${styles[props.tipos[0]]}`}>
+        <div title={`Card do Pokemon: ${props.nome}. Clique para ver detalhes!`} className={`${styles.card__pokemon} ${styles[props.tipos[0]]}`}>
             <figcaption>
                 <img src={props.foto} alt={`Imagem do pokemon ${props.nome}`} />
             </figcaption>
