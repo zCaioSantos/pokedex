@@ -1,14 +1,13 @@
 <div align="center">
    <img height="200" src="https://user-images.githubusercontent.com/81544166/159062575-670cf969-667c-43b6-9b17-929debef54f4.png" alt="Logo QrCode" />
    <h1>Pokedex</h1>
-   <p>Uma Pokedex feita consumindo a <a href="https://pokeapi.co">Pokeapi</a>.</p>
-   <br>
+   <p>A Pokedex made by consuming the <a href="https://pokeapi.co">Pokeapi</a>.</p>
 </div>
 
 # Sample preview running the app:
 
 <div align="center">
-   <a href="https://zpokedex.vercel.app">Preview Vercel</a>
+   <h3><a href="https://zpokedex.vercel.app">Preview Vercel</a></h3>
    <a href="https://zpokedex.vercel.app"><img src="https://user-images.githubusercontent.com/81544166/159189786-4dfcb7f5-6f24-4dc3-ac69-f532a8e46971.png" alt="Preview Build"></a>
 </div>
 
@@ -35,9 +34,9 @@ npm start
 
 ## Features
 
-- [x] Listar todos os Pokemons da 1ªGeração
-- [x] Buscar Pokemon
-- [x] Detalhes dos Pokemons
+- [x] List all 3rd Generation Pokemon
+- [x] Fetch Pokemon
+- [x] Pokemon details
 
 # Author
 
